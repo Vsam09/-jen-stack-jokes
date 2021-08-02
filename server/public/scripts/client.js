@@ -40,7 +40,7 @@ function renderJokes(jokes) {
             <ul>${joke.punchLine}</ul>
             `)
     }
-
+}
 function getJokes() {
     console.log(getJokes)
         $.ajax({
@@ -53,4 +53,3 @@ function getJokes() {
         renderJokes(response);
         });
     }
-}
