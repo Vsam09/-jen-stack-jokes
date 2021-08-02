@@ -33,6 +33,17 @@ let jokes = [
     punchLine: "It was a shih tzu."
   }
 ];
+app.get('/jokes', (req, res) => {
+  // send back to the client all calculations
+  res.send(jokes);
+})
+app.post('/jokes', (req, res) => {
+      console.log(jokes)
+      console.log('Here are the jokes:', req.body);
+      let newJokes = req.body;
+      jokes.push(newJokes)
+      res.send(200)
+});
 
 // serve back static files
 app.use(express.static('server/public'));
